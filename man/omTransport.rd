@@ -6,13 +6,14 @@
 }
 \description{
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
+This function contains an approximate solution to the one-to-many transportation (OTM) problem, which assigns a number of agents to a number of tasks, each of which has a weight. Each task can only be assigned to only one agent. The tasks must be assigned in a way that minimizes an overall cost function, while keeping the distribution of weights for the agents within certain bounds.
 }
 \usage{
-omTransport(x)
+omTransport(tamatrix,taskweights=NULL,agentassignment=NULL,tasknames=NULL,agentnames=NULL)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{
+  \item{tamatrix,taskweights=NULL,agentassignment=NULL,tasknames=NULL,agentnames=NULL}{
 %%     ~~Describe \code{x} here~~
 }
 }
