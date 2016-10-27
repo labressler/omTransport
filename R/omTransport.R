@@ -1,7 +1,9 @@
-require(lpSolve)
+list.of.packages <- c("lpSolve")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
 options(stringsAsFactors=F)
 
-omTransport <- function(tamatrix,taskweights=NULL,agentassignment=NULL,tasknames=NULL,agentnames=NULL) #tasks are the rows, agents are the columns
+omTransport <- function(tamatrix,taskweights=NULL,agentassignment=NULL,tasknames=NULL,agentnames=NULL,type=c("assignment","matrix")) #tasks are the rows, agents are the columns
 {
   zc <- tamatrix
   if(is.null(tasknames))
@@ -24,6 +26,14 @@ omTransport <- function(tamatrix,taskweights=NULL,agentassignment=NULL,tasknames
       taskweightmean <- mean(taskweights)
       adjtmean <- round(taskweightmean*nrow(zc)/ncol(zc))
       agentassg <- rep(adjtmean,ncol(zc))
+      diffa <- sum(taskweights)-sum(agentassg)
+      icount <- 1
+      while(diffa!=0)
+      {
+        agentassg[icount] <- agentassg[icount]+sign(diffa)
+        icount <- icount+1
+        diffa <- diffa-sign(diffa)
+      }
     }
   }
   if(is.null(taskweights))
@@ -151,5 +161,12 @@ omTransport <- function(tamatrix,taskweights=NULL,agentassignment=NULL,tasknames
   names(assg) <- colnames(zc)
   assg1 <- paste(assg,sep=",")
   asg1 <- paste(names(assg),assg1,sep=",")
+  typ <- match.arg(type)
+  if (typ=="assignment")
+  {
+    return (assg)
+  } else {
+    return(fin)
+  }
   return(assg)
 }
