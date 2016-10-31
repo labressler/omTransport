@@ -60,5 +60,5 @@ efforts <- c(1,3,2,4,6,8,7,4,8,8)
 omTransport(tamatrix=df,taskweights=efforts,tasknames=tasks,agentnames=agents)
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{ linearprogramming }% use one of  RShowDoc("KEYWORDS")
+\keyword{ transportationproblem }% __ONLY ONE__ keyword per line
