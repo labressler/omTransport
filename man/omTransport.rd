@@ -58,6 +58,7 @@ tasks <- c("Tree","Garden","Easy Field","Medium Field","Difficult Field","Really
 agents <- c("Gardener","Farmer","Programmer")
 efforts <- c(1,3,2,4,6,8,7,4,8,8)
 omTransport(tamatrix=df,taskweights=efforts,tasknames=tasks,agentnames=agents)
+}
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
 \keyword{ linearprogramming }% use one of  RShowDoc("KEYWORDS")
