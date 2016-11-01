@@ -19,7 +19,7 @@ require(devtools)
 install_github("labressler/omTransport")
 ```
 
-**Example uses:** Visit (http://labressler.github.io/analytics/omtransportvignette.html).
+**Example uses:** Visit http://labressler.github.io/analytics/omtransportvignette.html.
 
 
 
