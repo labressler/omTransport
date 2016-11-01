@@ -41,9 +41,11 @@ omTransport(tamatrix,taskweights=NULL,agentassignment=NULL,tasknames=NULL,agentn
 %% ~put references to the literature/web site here ~
 }
 \author{
+Liam Bressler
 %%  ~~who you are~~
 }
 \note{
+contact at liam.bressler@yale.edu
 %%  ~~further notes~~
 }
 
@@ -61,5 +63,6 @@ omTransport(tamatrix=df,taskweights=efforts,tasknames=tasks,agentnames=agents)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ linearprogramming }% use one of  RShowDoc("KEYWORDS")
-\keyword{ transportationproblem }% __ONLY ONE__ keyword per line
+\keyword{ datagem }% use one of  RShowDoc("KEYWORDS")
+\keyword{ statisticalmodels }% __ONLY ONE__ keyword per line
+\keyword{ optimize }
