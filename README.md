@@ -11,3 +11,15 @@ This problem differs from well-known combinatorial optimization problems in the 
 **[College assignment problem:](https://en.wikipedia.org/wiki/Stable_marriage_problem#Similar_problems)** This problem only utilizes the "ranks" of the preferences of the agents, and assigns each tasks with a weight of only one.
 
 
+**To download**: In your R console, type:
+
+```R
+install.packages("devtools")
+require(devtools)
+install_github("labressler/omTransport")
+```
+
+**Example uses:** Visit (http://labressler.github.io/analytics/omtransportvignette.html).
+
+
+
